@@ -5,10 +5,10 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\MidnightCommercial\Cinder\blocks\midnight-opencv\libs\opencv-3.2.0\include;C:\MidnightCommercial\Cinder\blocks\midnight-opencv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Cinder\blocks\morphogen-opencv\libs\opencv-3.2.0\include;C:\Cinder\blocks\morphogen-opencv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\MidnightCommercial\Cinder\blocks\midnight-opencv\libs\opencv-3.2.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Cinder\blocks\morphogen-opencv\libs\opencv-3.2.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_world320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
