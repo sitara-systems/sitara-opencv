@@ -3,6 +3,7 @@
 #include "opencv2/opencv.hpp"
 
 #include "cinder/Cinder.h"
+#include "cinder/gl/gl.h"	
 #include "cinder/ImageIo.h"
 
 namespace cinder {
@@ -166,9 +167,20 @@ namespace cinder {
 		return vec2(point.x, point.y);
 	}
 
+	inline vec3 fromOcv(const cv::Point3f &point)
+	{
+		return vec3(point.x, point.y, point.z);
+	}
+
+
 	inline cv::Point2f toOcv(const vec2 &point)
 	{
 		return cv::Point2f(point.x, point.y);
+	}
+
+	inline cv::Point3f toOcv(const vec3 &point)
+	{
+		return cv::Point3f(point.x, point.y, point.z);
 	}
 
 	inline ivec2 fromOcv(const cv::Point &point)
@@ -190,5 +202,6 @@ namespace cinder {
 	{
 		return Area(r.x, r.y, r.x + r.width, r.y + r.height);
 	}
+
 
 } // namespace cinder#pragma once
