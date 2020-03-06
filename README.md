@@ -1,4 +1,4 @@
-# midnight-opencv
+# sitara-opencv
 
 A cinder block for OpenCV v3.2.0+
 
