@@ -204,4 +204,4 @@ namespace cinder {
 	}
 
 
-} // namespace cinder#pragma once
+} // namespace cinder
