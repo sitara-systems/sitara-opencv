@@ -1,0 +1,22 @@
+{
+	"name": "sitara-opencv",
+	"version-string": "v0.1",
+	"port-version": 0,
+	"description": [
+		"A block for using OpenCV.",
+        "Copy the dependencies below to the vcpkg.json file for your project."
+	],
+	"homepage": "https://github.com/sitara-systems/sitara-opencv",
+	"documentation": "",
+	"maintainers": [
+		"Nathan Lachenmyer <nathan@sitara.systems>"
+	],
+	"dependencies": [
+		{
+			"name": "opencv",
+			"features": [
+				"opengl"
+			]
+		}
+		]
+}

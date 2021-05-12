@@ -1,3 +1,10 @@
+vcpkg_installed/*
+
+# video files
+*.mp4
+*.mov
+*.wmv
+
 # Compiled Object files
 *.slo
 *.lo
