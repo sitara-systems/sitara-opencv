@@ -1,12 +1,10 @@
 # sitara-opencv
 
-A cinder block for OpenCV v3.2.0+
-
-Yes, there already exists plenty of other cinderblocks for opencv -- this one isn't meant to replace 
-them, per se -- the goal is to keep our own version of the library and configurations that we can quickly
-update to new releases, and stash our cv-related code somewhere.
+Custom Classes and Modules for OpenCV and Cinder.  Largely influenced by Kyle McDonald's [ofxCv](https://github.com/kylemcdonald/ofxCv) but optimized for Cinder and our own applications.
 
 ## Requirements
+
+-   OpenCV 4.5.1
 
 ## Usage
 

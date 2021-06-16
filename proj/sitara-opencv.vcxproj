@@ -136,6 +136,9 @@
       </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>dxva2.lib;evr.lib;mf.lib;mfplat.lib;mfplay.lib;mfreadwrite.lib;mfuuid.lib;bcrypt.lib;ws2_32.lib;Secur32.lib;Strmiids.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -156,13 +159,21 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>dxva2.lib;evr.lib;mf.lib;mfplat.lib;mfplay.lib;mfreadwrite.lib;mfuuid.lib;bcrypt.lib;ws2_32.lib;Secur32.lib;Strmiids.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\ContourFinder.h" />
     <ClInclude Include="..\include\OpenCV.h" />
     <ClInclude Include="..\include\OpenCVHelpers.h" />
+    <ClInclude Include="..\include\Tracker.h" />
     <ClInclude Include="framework.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\ContourFinder.cpp" />
+    <ClCompile Include="..\src\OpenCVHelpers.cpp" />
+    <ClCompile Include="..\src\Tracker.cpp" />
     <ClCompile Include="sitara-opencv.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

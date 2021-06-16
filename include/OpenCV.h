@@ -4,3 +4,5 @@
 #include <opencv2/opencv.hpp>
 
 #include "OpenCVHelpers.h"
+#include "ContourFinder.h"
+#include "Tracker.h"
