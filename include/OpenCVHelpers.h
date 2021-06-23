@@ -1,7 +1,6 @@
 #pragma once
 
 #include "opencv2/opencv.hpp"
-
 #include "cinder/Cinder.h"
 #include "cinder/gl/gl.h"	
 #include "cinder/ImageIo.h"
@@ -222,7 +221,7 @@ namespace sitara {
 			return cv::Point(point.x, point.y);
 		}
 
-		inline cv::Rect toOcv(const ci::Area& r)
+		inline cv::Rect toOcv(const ci::Rectf& r)
 		{
 			return cv::Rect(r.x1, r.y1, r.getWidth(), r.getHeight());
 		}

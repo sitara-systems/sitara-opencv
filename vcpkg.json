@@ -15,7 +15,8 @@
 		{
 			"name": "opencv",
 			"features": [
-				"ffmpeg"
+				"ffmpeg",
+				"tbb"
 			]
 		}
 		]

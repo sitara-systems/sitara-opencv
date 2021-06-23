@@ -167,12 +167,14 @@
     <ClInclude Include="..\include\ContourFinder.h" />
     <ClInclude Include="..\include\OpenCV.h" />
     <ClInclude Include="..\include\OpenCVHelpers.h" />
+    <ClInclude Include="..\include\OpticalFlow.h" />
     <ClInclude Include="..\include\Tracker.h" />
     <ClInclude Include="framework.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ContourFinder.cpp" />
     <ClCompile Include="..\src\OpenCVHelpers.cpp" />
+    <ClCompile Include="..\src\OpticalFlow.cpp" />
     <ClCompile Include="..\src\Tracker.cpp" />
     <ClCompile Include="sitara-opencv.cpp" />
   </ItemGroup>

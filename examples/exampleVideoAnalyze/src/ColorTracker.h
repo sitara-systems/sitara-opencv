@@ -2,12 +2,12 @@
 
 #include "OpenCV.h"
 
-class Glow : public sitara::opencv::RectFollower {
+class ColorTracker : public sitara::opencv::RectFollower {
 protected:
 	ci::Color color;
 	ci::Rectf rect;
 public:
-	Glow() {};
+	ColorTracker() {};
 	void setup(const cv::Rect& track);
 	void update(const cv::Rect& track);
 	void kill();

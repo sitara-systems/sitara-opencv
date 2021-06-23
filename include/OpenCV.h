@@ -6,3 +6,4 @@
 #include "OpenCVHelpers.h"
 #include "ContourFinder.h"
 #include "Tracker.h"
+#include "OpticalFlow.h"

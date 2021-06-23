@@ -1,6 +1,6 @@
 # sitara-opencv
 
-Custom Classes and Modules for OpenCV and Cinder.  Largely influenced by Kyle McDonald's [ofxCv](https://github.com/kylemcdonald/ofxCv) but optimized for Cinder and our own applications.
+Custom Classes and Modules for OpenCV and Cinder.  Ported from Kyle McDonald's [ofxCv](https://github.com/kylemcdonald/ofxCv) but optimized for Cinder and Sitara Systems' own applications.
 
 ## Requirements
 

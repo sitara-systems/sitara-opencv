@@ -3,7 +3,7 @@
 #include "cinder/gl/gl.h"
 
 #include "OpenCV.h"
-#include "GlowTracker.h"
+#include "ColorTracker.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -19,7 +19,7 @@ class exampleVideoAnalyzeApp : public App {
 	std::shared_ptr<cv::VideoCapture> mVideoCapture;
 	ci::gl::Texture2dRef mTexture;
 	sitara::opencv::ContourFinder mContourFinder;
-	sitara::opencv::RectTrackerFollower<Glow> mTracker;
+	sitara::opencv::RectTrackerFollower<ColorTracker> mTracker;
 };
 
 void exampleVideoAnalyzeApp::setup() {
@@ -27,7 +27,7 @@ void exampleVideoAnalyzeApp::setup() {
 	if (!mVideoCapture->isOpened()) {
 		std::cout << "ERROR : could not open file; please check path" << std::endl;
 	}
-	ci::app::setFrameRate(24);
+	ci::app::setFrameRate(30);
 	mTracker.setPersistence(15);
 	mTracker.setMaximumDistance(32);
 }

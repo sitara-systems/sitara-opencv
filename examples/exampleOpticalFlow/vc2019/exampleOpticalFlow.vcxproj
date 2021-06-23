@@ -10,8 +10,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FDD1336A-96FC-49C8-B2C4-9735FBBD3D6F}</ProjectGuid>
-    <RootNamespace>exampleVideoAnalyze</RootNamespace>
+    <ProjectGuid>{78B8F358-D007-4BA0-B12B-9DC8CDBE5B31}</ProjectGuid>
+    <RootNamespace>exampleOpticalFlow</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -114,12 +114,10 @@
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
-    <ClCompile Include="..\src\ColorTracker.cpp" />
-    <ClCompile Include="..\src\exampleVideoAnalyzeApp.cpp" />
+    <ClCompile Include="..\src\exampleOpticalFlowApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
-    <ClInclude Include="..\src\ColorTracker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
