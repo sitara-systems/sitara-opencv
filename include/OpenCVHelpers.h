@@ -113,6 +113,7 @@ namespace sitara {
 			cv::Mat result(sourceRef->getHeight(), sourceRef->getWidth(), type);
 			ci::ImageTargetRef target = ImageTargetCvMat::createRef(&result);
 			sourceRef->load(target);
+			cv::flip(result, result, 0);
 			return result;
 		}
 

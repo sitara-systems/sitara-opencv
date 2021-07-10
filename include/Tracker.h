@@ -321,23 +321,24 @@ namespace sitara {
 			bool dead;
 			unsigned int label;
 		public:
-			Follower()
-				:dead(false)
-				, label(0) {}
+			Follower() : dead(false),
+			label(0) {}
 
 			virtual ~Follower() {};
-			virtual void setup(const T& track) {}
-			virtual void update(const T& track) {}
-			virtual void kill() {
+			virtual void setup(const T& track, void* parent = nullptr) {}
+			virtual void update(const T& track, void* parent = nullptr) {}
+			virtual void kill(void* parent = nullptr) {
 				dead = true;
 			}
 
 			void setLabel(unsigned int label) {
 				this->label = label;
 			}
+			
 			unsigned int getLabel() const {
 				return label;
 			}
+
 			bool getDead() const {
 				return dead;
 			}
@@ -351,7 +352,12 @@ namespace sitara {
 		protected:
 			std::vector<unsigned int> labels;
 			std::vector<F> followers;
+			void* mParentPointer = nullptr;
 		public:
+			void setParent(void* pointer) {
+				mParentPointer = pointer;
+			}
+
 			const std::vector<unsigned int>& track(const std::vector<T>& objects) {
 				Tracker<T>::track(objects);
 				// kill missing, update old
@@ -359,10 +365,10 @@ namespace sitara {
 					unsigned int curLabel = labels[i];
 					F& curFollower = followers[i];
 					if (!Tracker<T>::existsCurrent(curLabel)) {
-						curFollower.kill();
+						curFollower.kill(mParentPointer);
 					}
 					else {
-						curFollower.update(Tracker<T>::getCurrent(curLabel));
+						curFollower.update(Tracker<T>::getCurrent(curLabel), mParentPointer);
 					}
 				}
 				// add new
@@ -370,7 +376,7 @@ namespace sitara {
 					unsigned int curLabel = Tracker<T>::newLabels[i];
 					labels.push_back(curLabel);
 					followers.push_back(F());
-					followers.back().setup(Tracker<T>::getCurrent(curLabel));
+					followers.back().setup(Tracker<T>::getCurrent(curLabel), mParentPointer);
 					followers.back().setLabel(curLabel);
 				}
 				// remove dead
